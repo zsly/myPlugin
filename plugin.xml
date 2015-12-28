@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-myplugin" version="0.2.3">
+    <name>myplugin</name>
+    <description>Cordova myplugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,myplugin</keywords>
+    <js-module src="www/myPlugin.js" name="myPlugin">
+        <clobbers target="myPlugin" />
+    </js-module>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="myPlugin">
+                <param name="ios-package" value="myPlugin"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/myPlugin.h" />
+        <source-file src="src/ios/myPlugin.m" />
+    </platform>
+</plugin>
